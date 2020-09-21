@@ -5,15 +5,16 @@
         <i class="fas fa-search text-white" aria-hidden="true"></i>
       </span>
         </div>
-        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" v-model="search">
-        <p>Message is: {{ search }}</p>
+        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" v-model="search_one">
+        <button v-on:click="search_two=search_one">Search</button>
+        <p>Message is: {{ search_two }}</p>
     </div>
 </template>
 
 <script>
     export default {
         name: "Searchbar", data() {
-            return {search: "htl3r"}
+            return {search_one: "", search_two: ""}
         }
     }
 </script>
