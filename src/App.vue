@@ -1,32 +1,12 @@
 <template>
   <div id="app">
-
-    <searchbar/>
-
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-
-
-import Searchbar from "@/components/Searchbar";
-
-export default {
-  name: 'App',
-  components: {
-    Searchbar
-  },
-  methods: {
-    fetchData() {
-      fetch('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=ZCzC619AGEr8Re7Xz67lmb49QEg2aX9O&limit=5')
-          .then(response => response.json())
-          .then(data => console.log(data));
-    }
-  }
-}
-
-
-</script>
 
 <style>
 #app {
@@ -35,6 +15,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
