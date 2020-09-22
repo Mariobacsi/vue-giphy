@@ -1,8 +1,9 @@
 <template>
   <div>
     <b-card v-for="giph in data" :key="giph.id"
-            :img-src="giph.images.original.url"
-            :title="giph.title"/>
+            :title="giph.title">
+    <img :src="giph.images.original.url">
+    </b-card>
   </div>
 </template>
 
