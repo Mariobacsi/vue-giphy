@@ -5,10 +5,10 @@
         <b-button v-on:click="fetchData">los</b-button>
         <giph-list data=""></giph-list>
 
-        <video controls autoplay>
-            <source type="video/mp4"
-                    src="https://media2.giphy.com/media/5PhDdJQd2yG1MvHzJ6/giphy.mp4?cid=dde7065ctjb0l52jkjyd9z9pext4zgsxiykvmow1gqij687u&rid=giphy.mp4">
-        </video>
+        <!--<video controls autoplay>-->
+        <img src="https://media2.giphy.com/media/5PhDdJQd2yG1MvHzJ6/giphy.gif?cid=dde7065cnm75w6mdtd7m6hv4b8ioaz20ei2p1zybthcmgsex&rid=giphy.gif"/>
+
+
     </div>
 </template>
 
@@ -33,9 +33,11 @@
                 // var searchword = document.getElementById("tmp").innerText;
                 console.log(this.search);
 
-                fetch('http://api.giphy.com/v1/gifs/search?q=' + this.search + '&api_key=ZCzC619AGEr8Re7Xz67lmb49QEg2aX9O&limit=' + this.number_of_giphs)
+                this.data = fetch('http://api.giphy.com/v1/gifs/search?q=' + this.search + '&api_key=ZCzC619AGEr8Re7Xz67lmb49QEg2aX9O&limit=' + this.number_of_giphs)
                     .then(response => response.json())
                     .then(data => console.log(data));
+
+                console.log(this.data);
             }
         }
     }
