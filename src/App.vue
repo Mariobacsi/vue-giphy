@@ -2,7 +2,7 @@
   <div id="app">
 
     <b-form-input v-model="search" placeholder="Search"/>
-    <button v-on:click="fetchData">Search</button>
+    <b-button v-on:click="fetchData">Search</b-button>
     <giph-list data=""></giph-list>
 
   </div>
@@ -14,15 +14,15 @@ import GiphList from "@/components/GiphList";
 
 export default {
   name: 'App',
+    components: {
+    GiphList
+  },
   data() {
     return {
       number_of_giphs: "100",
       data: '',
       search: ''
     }
-  },
-  components: {
-    GiphList
   },
   methods: {
     fetchData() {
