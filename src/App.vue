@@ -1,11 +1,15 @@
 <!--Team: Seidl, Kraljevic, Scherling-->
 <template>
   <div id="app">
+
+    <!--Links zu den verschiedenen Views(Routers)-->
     <b-row>
       <router-link to="/"><b-button>Giphy</b-button></router-link>
       <router-link to="/extra"><b-button>Extra</b-button></router-link>
     </b-row>
+
     <router-view></router-view>
+
   </div>
 </template>
 

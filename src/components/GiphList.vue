@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-row flex-md-wrap">
+  <div class="d-flex justify-content-around flex-row flex-md-wrap">
     <img v-for="giph in data" :key="giph.id"
          :src="giph.images.original.url"
          :alt="giph.title">
@@ -16,7 +16,8 @@ export default {
 <style scoped>
 
 img{
-  object-fit: cover;
+  object-fit: fill;
+  margin-bottom: 2em;
 }
 
 </style>
