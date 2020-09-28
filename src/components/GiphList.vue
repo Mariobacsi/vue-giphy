@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <b-card v-for="giph in data" :key="giph.id"
-            :title="giph.title">
-    <img :src="giph.images.original.url">
-    </b-card>
+  <div class="d-flex flex-row flex-md-wrap">
+    <img v-for="giph in data" :key="giph.id"
+         :src="giph.images.original.url"
+         :alt="giph.title">
   </div>
 </template>
 
@@ -15,5 +14,9 @@ export default {
 </script>
 
 <style scoped>
+
+img{
+  object-fit: cover;
+}
 
 </style>
