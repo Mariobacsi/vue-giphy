@@ -1,15 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Giphy from '../views/Giphy.vue'
 import Extra from '../views/Extra'
+import Internationalization from "@/views/Internationalization";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/giphy',
     name: 'Giphy',
     component: Giphy
+  },
+  {
+    path: '/international',
+    name: 'Internationalization',
+    component: Internationalization
   },
   {
     path: '/extra',
