@@ -4,7 +4,7 @@
 
     <!--Links zu den verschiedenen Views(Routers)-->
     <b-row>
-      <b-row>
+      <b-row class="col-md">
         <router-link to="/giphy">
           <b-button>Giphy</b-button>
         </router-link>
@@ -13,7 +13,7 @@
         </router-link>
       </b-row>
       <!--Sprachselector-->
-      <b-form-select v-model="language"/>
+      <b-form-select class="col-md-1" v-model="language"/>
     </b-row>
 
     <router-view></router-view>
