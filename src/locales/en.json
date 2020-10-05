@@ -1,3 +1,13 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "app": {
+    "view-links": {
+
+    }
+  },
+  "internationalization": {
+    "title": {
+
+    }
+  }
 }
