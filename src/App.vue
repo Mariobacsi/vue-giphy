@@ -21,11 +21,8 @@
         </b-row>
 
         <router-view></router-view>
-
-        <p>{{ $t('hello') }}</p>
         <p>{{ $t('welcome') }}</p>
-        <p>{{ $t('yes-button') }}</p>
-        <p>{{ $t('no-button') }}</p>
+
     </div>
 </template>
 
@@ -34,7 +31,7 @@
     export default {
         name: 'App',
         data() {
-            return {langs: ['en', 'de', 'ar', 'lt']}
+            return {langs: ['en', 'de', 'ar']}
         }
     }
 
