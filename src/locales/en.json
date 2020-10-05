@@ -1,67 +1,13 @@
 {
+  "message": "hello i18n !!",
   "app": {
     "view-links": {
+
     }
   },
   "internationalization": {
-    "title": "Internationalization",
-    "text": "This is an example text.",
-    "button-yes": "yes",
-    "currency": {
-      "style": "currency",
-      "currency": "USD"
-    },
-    "date": {
-      "month_limit": [
-        {
-          "value": "January",
-          "text": "January"
-        },
-        {
-          "value": "February",
-          "text": "February"
-        },
-        {
-          "value": "March",
-          "text": "March"
-        },
-        {
-          "value": "April",
-          "text": "April"
-        },
-        {
-          "value": "May",
-          "text": "May"
-        },
-        {
-          "value": "June",
-          "text": "June"
-        },
-        {
-          "value": "July",
-          "text": "July"
-        },
-        {
-          "value": "August",
-          "text": "August"
-        },
-        {
-          "value": "September",
-          "text": "September"
-        },
-        {
-          "value": "October",
-          "text": "October"
-        },
-        {
-          "value": "November",
-          "text": "November"
-        },
-        {
-          "value": "December",
-          "text": "December"
-        }
-      ]
+    "title": {
+
     }
   }
 }
