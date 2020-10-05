@@ -22,6 +22,7 @@
 
         <router-view></router-view>
         <p>{{ $t('welcome') }}</p>
+        <b-button>{{$t('yes')}}</b-button>
 
     </div>
 </template>
