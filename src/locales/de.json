@@ -4,42 +4,42 @@
     }
   },
   "internationalization": {
-    "title": "Internationalization",
-    "text": "This is an example text.",
-    "button-yes": "yes",
+    "title": "Internationalisierung",
+    "text": "Dies ist ein Beiepieltext.",
+    "button-yes": "Ja",
     "currency": {
       "style": "currency",
-      "currency": "USD"
+      "currency": "EU"
     },
     "date": {
       "month_limit": [
         {
-          "value": "January",
-          "text": "January"
+          "value": "Jänner",
+          "text": "Jänner"
         },
         {
-          "value": "February",
-          "text": "February"
+          "value": "Februar",
+          "text": "Februar"
         },
         {
-          "value": "March",
-          "text": "March"
+          "value": "März",
+          "text": "März"
         },
         {
           "value": "April",
           "text": "April"
         },
         {
-          "value": "May",
-          "text": "May"
+          "value": "Mai",
+          "text": "Mai"
         },
         {
-          "value": "June",
-          "text": "June"
+          "value": "Juni",
+          "text": "Juni"
         },
         {
-          "value": "July",
-          "text": "July"
+          "value": "Juli",
+          "text": "Juli"
         },
         {
           "value": "August",
@@ -50,16 +50,16 @@
           "text": "September"
         },
         {
-          "value": "October",
-          "text": "October"
+          "value": "Oktober",
+          "text": "Oktober"
         },
         {
           "value": "November",
           "text": "November"
         },
         {
-          "value": "December",
-          "text": "December"
+          "value": "Dezember",
+          "text": "Dezember"
         }
       ]
     }
