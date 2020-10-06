@@ -8,8 +8,8 @@
                 <router-link to="/giphy">
                     <b-button>Giphy</b-button>
                 </router-link>
-                <router-link to="/internationalization">
-                    <b-button>Internationalization</b-button>
+                <router-link to="/international">
+                    <b-button>International</b-button>
                 </router-link>
             </b-row>
             <!--Sprachselector-->
@@ -21,6 +21,9 @@
         </b-row>
 
         <router-view></router-view>
+        <p>{{ $t('internationalization.text') }}</p>
+        <b-button>{{$t('internationalization.button-yes')}}</b-button>
+
     </div>
 </template>
 
