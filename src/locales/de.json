@@ -7,61 +7,6 @@
     "title": "Internationalisierung",
     "text": "Wussten Sie, dass eine einfache Begrüßungsnachricht entscheiden kann, ob jemand bei Ihnen kauft oder weggeht? Das Lernen, aus der First-Touch-Interaktion eine Beziehung zu Ihren potenziellen Kunden aufzubauen, kann den zukünftigen Erfolg Ihres Unternehmens bestimmen.",
     "button-yes": "Ja",
-    "currency": {
-      "style": "currency",
-      "currency": "EU"
-    },
-    "date": {
-      "month_limit": [
-        {
-          "value": "Jänner",
-          "text": "Jänner"
-        },
-        {
-          "value": "Februar",
-          "text": "Februar"
-        },
-        {
-          "value": "März",
-          "text": "März"
-        },
-        {
-          "value": "April",
-          "text": "April"
-        },
-        {
-          "value": "Mai",
-          "text": "Mai"
-        },
-        {
-          "value": "Juni",
-          "text": "Juni"
-        },
-        {
-          "value": "Juli",
-          "text": "Juli"
-        },
-        {
-          "value": "August",
-          "text": "August"
-        },
-        {
-          "value": "September",
-          "text": "September"
-        },
-        {
-          "value": "Oktober",
-          "text": "Oktober"
-        },
-        {
-          "value": "November",
-          "text": "November"
-        },
-        {
-          "value": "Dezember",
-          "text": "Dezember"
-        }
-      ]
-    }
+    "currency": "Ihre Kosten: 9.999,90€"
   }
 }
