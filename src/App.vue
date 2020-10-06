@@ -21,7 +21,7 @@
         </b-row>
 
         <router-view></router-view>
-        <p>{{ $t('welcome') }}</p>
+        <p>{{ $t('internationalization.text') }}</p>
         <b-button>{{$t('yes')}}</b-button>
 
     </div>
