@@ -5,7 +5,7 @@
   },
   "internationalization": {
     "title": "Internationalisierung",
-    "text": "Dies ist ein Beiepieltext.",
+    "text": "Wussten Sie, dass eine einfache Begrüßungsnachricht entscheiden kann, ob jemand bei Ihnen kauft oder weggeht? Das Lernen, aus der First-Touch-Interaktion eine Beziehung zu Ihren potenziellen Kunden aufzubauen, kann den zukünftigen Erfolg Ihres Unternehmens bestimmen.",
     "button-yes": "Ja",
     "currency": {
       "style": "currency",
@@ -64,6 +64,5 @@
       ]
     }
   },
-  "welcome": "Wussten Sie, dass eine einfache Begrüßungsnachricht entscheiden kann, ob jemand bei Ihnen kauft oder weggeht? Das Lernen, aus der First-Touch-Interaktion eine Beziehung zu Ihren potenziellen Kunden aufzubauen, kann den zukünftigen Erfolg Ihres Unternehmens bestimmen.",
   "yes": "ja"
 }
