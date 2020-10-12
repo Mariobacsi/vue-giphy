@@ -15,7 +15,7 @@
             <!--Sprachselector-->
             <div class="locale-changer ">
                 <select v-model="$i18n.locale" class="col-md-1">
-                    <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+                    <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
                 </select>
             </div>
         </b-row>
@@ -32,7 +32,11 @@
         name: 'App',
         data() {
             return {
-                langs: ['English', 'German', 'Arabic']
+                langs: {
+                    en: {value: "en", text: "English"},
+                    de: {value: "de", text: "Deutsch"},
+                    re: {value: "ar", text: "عربى"}
+                }
             }
         }
     }
@@ -50,6 +54,7 @@
         margin: 60px auto auto;
         width: 90%;
     }
+
     .col-md-1 {
         flex: 0 0 8.333333%;
         max-width: 833.333333PX;
