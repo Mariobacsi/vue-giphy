@@ -9,7 +9,7 @@
                     <b-button>Giphy</b-button>
                 </router-link>
                 <router-link to="/internationalization">
-                    <b-button>International</b-button>
+                    <b-button>{{ $t('app.view-links.internationalization') }}</b-button>
                 </router-link>
             </b-row>
             <!--Sprachselector-->
