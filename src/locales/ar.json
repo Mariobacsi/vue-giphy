@@ -1,5 +1,4 @@
 {
-  "message": "hello i18n !!",
   "app": {
     "view-links": {
       "internationalization": "تدويل"
@@ -8,7 +7,6 @@
   "internationalization": {
     "title": "Internationalisierung",
     "text": "هل تعلم أن رسالة ترحيب بسيطة يمكن أن تحدد ما إذا كان شخص ما يشتري منك أو يذهب بعيدًا؟ تعلم بناء علاقة مع العملاء المحتملين من أول تفاعل قد يحدد النجاح المستقبلي لعملك.",
-    "button-yes": "نعم",
-    "currency": "تكاليفك: تسعة و تسعون ألف و تسعة مائة و تسعة و تسعون ریال"
+    "button-yes": "نعم"
   }
 }
