@@ -16,8 +16,40 @@ function loadLocaleMessages () {
   return messages
 }
 
+const dateTimeFormats = {
+  'en': {
+    short: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }
+  },
+  'de': {
+    short: {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }
+  }
+}
+
+const numberFormats = {
+  'en': {
+    currency: {
+      style: 'currency', currency: 'USD'
+    }
+  },
+  'de': {
+    currency: {
+      style: 'currency', currency: 'EUR'
+    }
+  }
+}
+
 export default new VueI18n({
   locale: process.env.VUE_APP_I18N_LOCALE || 'en',
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: loadLocaleMessages()
+  messages: loadLocaleMessages(),
+  dateTimeFormats,
+  numberFormats
 })

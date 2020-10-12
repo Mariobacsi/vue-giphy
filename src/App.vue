@@ -1,62 +1,61 @@
 <!--Team: Seidl, Kraljevic, Scherling-->
 <template>
-    <div id="app">
+  <div id="app">
 
-        <!--Links zu den verschiedenen Views(Routers)-->
-        <b-row>
-            <b-row class="col-md">
-                <router-link to="/giphy">
-                    <b-button>Giphy</b-button>
-                </router-link>
-                <router-link to="/internationalization">
-                    <b-button>{{ $t('app.view-links.internationalization') }}</b-button>
-                </router-link>
-            </b-row>
-            <!--Sprachselector-->
-            <div class="locale-changer ">
-                <select v-model="$i18n.locale" class="col-md-1">
-                    <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
-                </select>
-            </div>
-        </b-row>
+    <!--Links zu den verschiedenen Views(Routers)-->
+    <b-row>
+      <b-row class="col-md">
+        <router-link to="/giphy">
+          <b-button>Giphy</b-button>
+        </router-link>
+        <router-link to="/internationalization">
+          <b-button>{{ $t('app.view-links.internationalization') }}</b-button>
+        </router-link>
+      </b-row>
+      <!--Sprachselector-->
+      <div class="locale-changer ">
+        <select v-model="$i18n.locale" class="col-md-1">
+          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
+        </select>
+      </div>
+    </b-row>
 
-        <router-view></router-view>
+    <router-view></router-view>
 
 
-    </div>
+  </div>
 </template>
 
 <script>
 
-    export default {
-        name: 'App',
-        data() {
-            return {
-                langs: {
-                    en: {value: "en", text: "English"},
-                    de: {value: "de", text: "Deutsch"},
-                    re: {value: "ar", text: "عربى"}
-                }
-            }
-        }
+export default {
+  name: 'App',
+  data() {
+    return {
+      langs: {
+        en: {value: "en", text: "English"},
+        de: {value: "de", text: "Deutsch"}
+      }
     }
+  }
+}
 
 
 </script>
 
 <style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin: 60px auto auto;
-        width: 90%;
-    }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 60px auto auto;
+  width: 90%;
+}
 
-    .col-md-1 {
-        flex: 0 0 8.333333%;
-        max-width: 833.333333PX;
-    }
+.col-md-1 {
+  flex: 0 0 8.333333%;
+  max-width: 833.333333PX;
+}
 </style>
