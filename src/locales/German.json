@@ -1,6 +1,7 @@
 {
   "app": {
     "view-links": {
+      "internationalization": "Internationalisierung"
     }
   },
   "internationalization": {

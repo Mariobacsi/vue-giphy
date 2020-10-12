@@ -2,7 +2,7 @@
   "message": "hello i18n !!",
   "app": {
     "view-links": {
-
+      "internationalization": "تدويل"
     }
   },
   "internationalization": {
