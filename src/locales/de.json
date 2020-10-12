@@ -1,0 +1,13 @@
+{
+  "app": {
+    "language": "Sprache"
+  },
+  "giphy": {
+    "title": "Giphy",
+    "search": "Suche"
+  },
+  "internationalization": {
+    "title": "Internationalisierung",
+    "text": "Wussten Sie, dass eine einfache Begrüßungsnachricht entscheiden kann, ob jemand bei Ihnen kauft oder weggeht? Das Lernen, aus der First-Touch-Interaktion eine Beziehung zu Ihren potenziellen Kunden aufzubauen, kann den zukünftigen Erfolg Ihres Unternehmens bestimmen."
+  }
+}
