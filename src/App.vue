@@ -6,17 +6,22 @@
     <b-row>
       <b-row class="col-md">
         <router-link to="/giphy">
-          <b-button>Giphy</b-button>
+          <b-button>{{ $t('giphy.title') }}</b-button>
         </router-link>
         <router-link to="/internationalization">
-          <b-button>{{ $t('app.view-links.internationalization') }}</b-button>
+          <b-button>{{ $t('internationalization.title') }}</b-button>
         </router-link>
       </b-row>
       <!--Sprachselector-->
       <div class="locale-changer ">
-        <select v-model="$i18n.locale" class="col-md-1">
-          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
-        </select>
+        <label>
+          <b-row>
+            <p class="col-md">{{ $t('app.language') }}</p>
+            <select v-model="$i18n.locale" style="width: fit-content">
+              <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
+            </select>
+          </b-row>
+        </label>
       </div>
     </b-row>
 

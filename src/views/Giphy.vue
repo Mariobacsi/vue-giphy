@@ -1,23 +1,14 @@
 <template>
   <div id="giphy">
     <div class="row" style="margin-bottom: 2em">
-
-      <!--Drop Down für Anzahl an gezeigten Gifs-->
       <b-form-select class="col-md-1" v-model="limit" :options="options_limit"></b-form-select>
-
       <div class="row col-md">
-
-        <!--Die Eigentliche Searchbar-->
-        <b-form-input class="col-md-11" v-model="search" placeholder="Search" @keyup.enter="fetchData"></b-form-input>
-
-        <!--Button Zum searchen-->
-        <b-button class="col" v-on:click="fetchData">Search</b-button>
-
+        <b-form-input class="col-md-11" v-model="search" :placeholder="$t('giphy.search')" @keyup.enter="fetchData"></b-form-input>
+        <b-button class="col" v-on:click="fetchData">{{ $t('giphy.search') }}</b-button>
       </div>
     </div>
 
     <giph-list :data="data.data"></giph-list>
-
   </div>
 </template>
 

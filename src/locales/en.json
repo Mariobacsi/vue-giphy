@@ -1,12 +1,13 @@
 {
   "app": {
-    "view-links": {
-      "internationalization": "Internationalization"
-    }
+    "language": "language"
+  },
+  "giphy": {
+    "title": "Giphy",
+    "search": "Search"
   },
   "internationalization": {
-    "title": "Internationalisierung",
-    "text": "Will you have a simple welcome message chosen whether someone is buying from you or going away? Learning from the first-touch interaction a relationship with your personal customer relationships can lead to personal success.",
-    "button-yes": "yes"
+    "title": "Internationalization",
+    "text": "Will you have a simple welcome message chosen whether someone is buying from you or going away? Learning from the first-touch interaction a relationship with your personal customer relationships can lead to personal success."
   }
 }
