@@ -1,18 +1,23 @@
 <template>
   <div>
-    <h1>Title</h1>
-    <button>Show Date</button>
-    <div>
-      <b-form-select v-model="date_day" :options="date_day_limit"/>
-      <b-form-select v-model="date_month" :options="date_month_limit"/>
-      <b-form-select v-model="date_year" :options="date_year_limit"/>
-    </div>
+    <h1>{{ $t('internationalization.title') }}</h1>
+    <p>{{ $t('internationalization.text') }}</p>
+    <b-form-datepicker v-model="date"
+                       :locale="$i18n.locale"
+                       style="margin-bottom: 1em"/>
+    <p>{{ $d(new Date(), 'short') }}</p>
+    <p>{{ $n(100, 'currency') }}</p>
   </div>
 </template>
 
 <script>
 export default {
-name: "Internationalization"
+  name: "Internationalization",
+  data() {
+    return {
+      date: undefined
+    }
+  }
 }
 </script>
 

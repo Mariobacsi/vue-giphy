@@ -14,7 +14,7 @@ const routes = [
     component: Giphy
   },
   {
-    path: '/international',
+    path: '/internationalization',
     name: 'Internationalization',
     component: Internationalization
   },
