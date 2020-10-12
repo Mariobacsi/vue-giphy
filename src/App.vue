@@ -32,7 +32,7 @@
         name: 'App',
         data() {
             return {
-                langs: ['en', 'de', 'ar']
+                langs: ['English', 'German', 'Arabic']
             }
         }
     }
@@ -48,5 +48,9 @@
         color: #2c3e50;
         margin: 60px auto auto;
         width: 90%;
+    }
+    .col-md-1 {
+        flex: 0 0 8.333333%;
+        max-width: 833.333333PX;
     }
 </style>
