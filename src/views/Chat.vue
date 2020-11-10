@@ -14,8 +14,8 @@
       </form>
     </div>
 
-    <div class="col" style="padding: 0">
-      <div v-for="msg in received_messages" v-bind:key="msg.id">
+    <div class="col" style="padding: 0; overflow: visible">
+      <div v-for="msg in render_messaged" v-bind:key="msg.id">
         <div class="row" style="padding: .5em">
           <div style="width: 20vw" v-if="msg.own"/>
           <b-card class="col">
@@ -34,8 +34,6 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
-import SockJS from "sockjs-client";
 import Stomp from "webstomp-client";
 
 export default {
@@ -43,15 +41,18 @@ export default {
   data() {
     return {
       received_messages: [],
+      render_messaged: [],
       connection: false,
-      username: undefined,
-      text: ""
+      username: undefined
     }
   },
   methods: {
+    /**
+     * Connects the client to the socket
+     */
     connect() {
       if (!this.username) {
-        this.username = [ ]
+        throw "Username is empty"
       }
       this.socket = new WebSocket("ws://127.0.0.1:8081/chat");
       this.stompClient = Stomp.over(this.socket);
@@ -60,26 +61,31 @@ export default {
             this.text = ""
             console.log(frame)
             this.stompClient.subscribe('/topic/messages', tick => {
-              console.log("subscribe")
               console.log(tick)
               let msg = JSON.parse(tick.body)
               msg.from === this.username ? msg.own = true : msg.own = false
-              console.log(msg)
               this.received_messages.push(msg)
+              this.render_messaged = this.received_messages.reverse()
             });
-          },
-          error => {
+          }, error => {
             console.log(error)
             this.connection = false
           }
       )
     },
+    /**
+     * Closes the connection between socket and client and deletes the chat log
+     */
     disconnect() {
       if (this.stompClient) {
         this.stompClient.disconnect()
       }
       this.connection = false
+      this.received_messages = []
     },
+    /**
+     * Sends the new message to the server to distribute it to all clients
+     */
     send() {
       if (this.text) {
         if (this.stompClient && this.stompClient.connected) {
@@ -90,24 +96,20 @@ export default {
           this.text = ""
         }
       } else console.log("Message is empty")
-    },
-    changeConnection() {
-      this.connection ? this.disconnect() : this.connect()
     }
-  },
-  mounted() {
-    // this.connect();
   }
 }
 </script>
 <style scoped>
 
-p{
+p {
   margin: 0;
 }
 
-._date{
-  padding-left: 1em; font-size: .7em; color: #777777
+._date {
+  padding-left: 1em;
+  font-size: .7em;
+  color: #777777
 }
 
 </style>
