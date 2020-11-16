@@ -4,19 +4,22 @@
 
     <!--Links zu den verschiedenen Views(Routers)-->
     <b-row>
-      <b-row class="col-md">
+      <b-row class="col">
         <router-link to="/giphy">
           <b-button>{{ $t('giphy.title') }}</b-button>
         </router-link>
         <router-link to="/internationalization">
           <b-button>{{ $t('internationalization.title') }}</b-button>
         </router-link>
+        <router-link to="/chat">
+          <b-button>{{ $t('chat.title') }}</b-button>
+        </router-link>
       </b-row>
       <!--Sprachselector-->
       <div class="locale-changer ">
         <label>
           <b-row>
-            <p class="col-md">{{ $t('app.language') }}</p>
+            <p class="col">{{ $t('app.language') }}</p>
             <select v-model="$i18n.locale" style="width: fit-content">
               <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
             </select>

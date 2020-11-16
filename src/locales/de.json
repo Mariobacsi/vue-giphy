@@ -2,6 +2,9 @@
   "app": {
     "language": "Sprache"
   },
+  "chat": {
+    "title": "Chat"
+  },
   "giphy": {
     "title": "Giphy",
     "search": "Suche"
