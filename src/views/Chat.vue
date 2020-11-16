@@ -54,7 +54,7 @@ export default {
       if (!this.username) {
         throw "Username is empty"
       }
-      this.socket = new WebSocket("ws://127.0.0.1:8081/chat");
+      this.socket = new WebSocket("ws://127.0.0.1:8080/chat");
       this.stompClient = Stomp.over(this.socket);
       this.stompClient.connect({}, frame => {
             this.connection = true
