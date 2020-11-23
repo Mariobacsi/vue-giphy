@@ -28,7 +28,7 @@
       </div>
     </b-row>
 
-    <router-view></router-view>
+    <router-view class="col"></router-view>
 
 
   </div>
