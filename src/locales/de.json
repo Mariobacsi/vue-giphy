@@ -1,6 +1,14 @@
 {
   "app": {
-    "language": "Sprache"
+    "language": "Sprache",
+    "links": [
+      {"link": "/giphy", "text": "Giphy"},
+      {"link": "/internationalisation", "text": "Internationalisierung"},
+      {"link": "/chat", "text": "Chat"}
+    ]
+  },
+  "chat": {
+    "title": "Chat"
   },
   "giphy": {
     "title": "Giphy",

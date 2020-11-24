@@ -22,6 +22,11 @@ const routes = [
     path: '/extra',
     name: 'Extra',
     component: Extra
+  },
+  {
+    path: '/chat',
+    name: 'Chat',
+    component: () => import('../views/Chat.vue')
   }
 ]
 
