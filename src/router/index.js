@@ -8,30 +8,35 @@ import Internationalization from "@/views/Internationalization";
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/giphy',
-    name: 'Giphy',
-    component: Giphy
-  },
-  {
-    path: '/internationalization',
-    name: 'Internationalization',
-    component: Internationalization
-  },
-  {
-    path: '/extra',
-    name: 'Extra',
-    component: Extra
-  },
-  {
-    path: '/chat',
-    name: 'Chat',
-    component: () => import('../views/Chat.vue')
-  }
+    {
+        path: '/giphy',
+        name: 'Giphy',
+        component: Giphy
+    },
+    {
+        path: '/internationalization',
+        name: 'Internationalization',
+        component: Internationalization
+    },
+    {
+        path: '/extra',
+        name: 'Extra',
+        component: Extra
+    },
+    {
+        path: '/chat',
+        name: 'Chat',
+        component: () => import('../views/Chat.vue')
+    },
+    {
+        path: '/textToSpeech',
+        name: 'Chat',
+        component: () => import('../views/textToSpeech')
+    }
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router

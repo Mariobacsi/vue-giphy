@@ -1,7 +1,6 @@
 <!--Team: Seidl, Kraljevic, Scherling-->
 <template>
   <div id="app">
-
     <!--Links zu den verschiedenen Views(Routers)-->
     <b-row>
       <b-row class="col">
@@ -13,6 +12,9 @@
         </router-link>
         <router-link to="/chat">
           <b-button>{{ $t('chat.title') }}</b-button>
+        </router-link>
+        <router-link to="/textToSpeech">
+          <b-button>{{ $t('textToSpeech.title') }}</b-button>
         </router-link>
       </b-row>
       <!--Sprachselector-->
