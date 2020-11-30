@@ -29,9 +29,9 @@ const routes = [
         component: () => import('../views/Chat.vue')
     },
     {
-        path: '/textToSpeech',
-        name: 'Chat',
-        component: () => import('../views/textToSpeech')
+        path: '/translator',
+        name: 'Translator',
+        component: () => import('../views/Translator')
     }
 ]
 
