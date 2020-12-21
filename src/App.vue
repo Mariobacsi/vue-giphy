@@ -3,38 +3,35 @@
   <div id="app">
 
     <!--Links zu den verschiedenen Views(Routers)-->
-    <b-row>
-      <b-row class="col">
-        <router-link to="/giphy">
-          <b-button>{{ $t('giphy.title') }}</b-button>
-        </router-link>
-        <router-link to="/internationalization">
-          <b-button>{{ $t('internationalization.title') }}</b-button>
-        </router-link>
-        <router-link to="/chat">
-          <b-button>{{ $t('chat.title') }}</b-button>
-        </router-link>
-      </b-row>
-      <!--Sprachselector-->
-      <div class="locale-changer ">
-        <label>
-          <b-row>
-            <p class="col">{{ $t('app.language') }}</p>
-            <select v-model="$i18n.locale" style="width: fit-content">
-              <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
-            </select>
-          </b-row>
-        </label>
+    <div class="btn-toolbar justify-content-between mb-3" role="toolbar">
+      <div class="col btn-group btn-block" role="group">
+        <router-link class="btn btn-secondary" to="/giphy">{{ $t('giphy.title') }}</router-link>
+        <router-link class="btn btn-secondary" to="/internationalization">{{ $t('internationalization.title') }}</router-link>
+        <router-link to="/chat" class="btn btn-secondary">{{ $t('chat.title') }}</router-link>
+        <router-link to="/translator" class="btn btn-secondary">{{ $t('translator.title') }}</router-link>
       </div>
-    </b-row>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><font-awesome-icon icon="globe-americas"></font-awesome-icon></div>
+        </div>
+        <select class="form-control" v-model="$i18n.locale" id="languageSelector">
+          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">{{ lang.text }}</option>
+        </select>
+      </div>
+    </div>
 
     <router-view class="col"></router-view>
-
 
   </div>
 </template>
 
 <script>
+
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faGlobeAmericas} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faGlobeAmericas)
 
 export default {
   name: 'App',
@@ -62,8 +59,7 @@ export default {
   width: 90%;
 }
 
-.col-md-1 {
-  flex: 0 0 8.333333%;
-  max-width: 833.333333PX;
+.router-link-active a {
+
 }
 </style>
