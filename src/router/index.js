@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Giphy from '../views/Giphy.vue'
-import Extra from '../views/Extra'
-import Internationalization from "@/views/Internationalization";
+import Extra from '../views/Extra.vue'
+import Internationalization from "@/views/Internationalization.vue";
 
 Vue.use(VueRouter)
 
@@ -31,7 +31,7 @@ const routes = [
     {
         path: '/translator',
         name: 'Translator',
-        component: () => import('../views/Translator')
+        component: () => import('../views/Translator.vue')
     }
 ]
 
