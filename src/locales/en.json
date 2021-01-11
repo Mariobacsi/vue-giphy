@@ -1,6 +1,10 @@
 {
   "app": {
-    "language": "language"
+    "language": "Language",
+    "languages": [
+      {"value": "de", "text": "German"},
+      {"value": "en", "text": "English"}
+    ]
   },
   "chat": {
     "title": "Chat"
@@ -12,5 +16,8 @@
   "internationalization": {
     "title": "Internationalization",
     "text": "Will you have a simple welcome message chosen whether someone is buying from you or going away? Learning from the first-touch interaction a relationship with your personal customer relationships can lead to personal success."
+  },
+  "translator": {
+    "title": "Translator"
   }
 }

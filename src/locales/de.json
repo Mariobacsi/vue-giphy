@@ -4,7 +4,12 @@
     "links": [
       {"link": "/giphy", "text": "Giphy"},
       {"link": "/internationalisation", "text": "Internationalisierung"},
-      {"link": "/chat", "text": "Chat"}
+      {"link": "/chat", "text": "Chat"},
+      {"link": "/translate", "text": "Übersetzer"}
+    ],
+    "languages": [
+      {"value": "de", "text": "Deutsch"},
+      {"value": "en", "text": "Englisch"}
     ]
   },
   "chat": {
@@ -17,5 +22,8 @@
   "internationalization": {
     "title": "Internationalisierung",
     "text": "Wussten Sie, dass eine einfache Begrüßungsnachricht entscheiden kann, ob jemand bei Ihnen kauft oder weggeht? Das Lernen, aus der First-Touch-Interaktion eine Beziehung zu Ihren potenziellen Kunden aufzubauen, kann den zukünftigen Erfolg Ihres Unternehmens bestimmen."
+  },
+  "translator": {
+    "title": "Übersetzer"
   }
 }
