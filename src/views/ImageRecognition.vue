@@ -34,7 +34,7 @@ export default {
   methods: {
     onFileChange(event) {
       this.imageFile = event.target.files[0]
-      console.log(this.imageFile)
+      this.getDataFile()
     },
     getDataUrl() {
       if (this.imageUrl) {
@@ -56,10 +56,8 @@ export default {
         formData.append("image", this.imageFile, this.imageFile.name)
         Axios.post('https://api.imagga.com/v2/uploads', {
           body: formData,
-          auth: {
-            username: this.apiKey,
-            password: this.apiSecret
-          }
+          username: this.apiKey,
+          password: this.apiSecret
         }).then(response => {
           console.log(response)
           this.tags = response.data.result.tags
