@@ -9,8 +9,8 @@ import Axios from "axios";
 
 export default {
   name: "ImageRecognition",
-  data(){
-    return{
+  data() {
+    return {
       imageUrl: 'https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg',
       apiKey: "acc_2db7600b6fe4ac0",
       apiSecret: "40c7c466795f517d0abfdcae3be834f6",
@@ -18,12 +18,14 @@ export default {
     }
   },
   methods: {
-    getData(){
+    getData() {
       Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
-        username: this.apiKey,
-        password: this.apiSecret
+        auth: {
+          username: this.apiKey,
+          password: this.apiSecret
+        }
       }).then(response => console.log(response))
-      .catch(error => console.error(error))
+          .catch(error => console.error(error))
     }
   }
 }
