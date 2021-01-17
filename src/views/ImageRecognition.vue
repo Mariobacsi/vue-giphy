@@ -1,14 +1,17 @@
 <template>
-  <div class="">
+  <div>
+    <tag-list></tag-list>
     <button class="btn btn-secondary" @click="getData">get Data</button>
   </div>
 </template>
 
 <script>
 import Axios from "axios";
+import TagList from "@/components/TagList";
 
 export default {
   name: "ImageRecognition",
+  components: {TagList},
   data() {
     return {
       imageUrl: 'https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg',
