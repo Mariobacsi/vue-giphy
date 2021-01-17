@@ -1,6 +1,7 @@
 <template>
   <div class="col row">
     <div class="col-8">
+      <img v-if="imageUrl" :src="imageUrl" class="col">
       <div class="input-group">
         <input class="col-9 form-control" type="url" v-model="imageUrl" placeholder="Image URL">
         <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataUrl">get Data</button>
@@ -29,6 +30,11 @@ export default {
       apiKey: "acc_2db7600b6fe4ac0",
       apiSecret: "40c7c466795f517d0abfdcae3be834f6",
       streaming: false
+    }
+  },
+  watch:{
+    imageUrl: () => {
+      this.getDataUrl
     }
   },
   methods: {
