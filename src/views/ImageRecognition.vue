@@ -2,10 +2,13 @@
   <div class="col row">
     <div class="col-8">
       <div class="input-group">
-        <input class="form-control" type="url" v-model="imageUrl" placeholder="Image URL">
-        <button class="btn btn-outline-secondary" type="button" @click="getData">get Data</button>
+        <input class="col-9 form-control" type="url" v-model="imageUrl" placeholder="Image URL">
+        <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataUrl">get Data</button>
       </div>
-      <b-form-file v-model="imageFile" accept="image/*"></b-form-file>
+      <div class="input-group">
+        <input class="col-9" type="file" @change="onFileChange">
+        <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataFile">get Data</button>
+      </div>
     </div>
     <tag-list class="col-4" :data="this.tags"></tag-list>
   </div>
@@ -29,9 +32,30 @@ export default {
     }
   },
   methods: {
-    getData() {
+    onFileChange(event) {
+      this.imageFile = event.target.files[0]
+      console.log(this.imageFile)
+    },
+    getDataUrl() {
       if (this.imageUrl) {
         Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
+          auth: {
+            username: this.apiKey,
+            password: this.apiSecret
+          }
+        }).then(response => {
+          console.log(response)
+          this.tags = response.data.result.tags
+        }).catch(error => console.error(error))
+      }
+    },
+    getDataFile() {
+      if (this.imageFile) {
+        console.log(this.imageFile)
+        let formData = new FormData()
+        formData.append("image", this.imageFile, this.imageFile.name)
+        Axios.post('https://api.imagga.com/v2/uploads', {
+          body: formData,
           auth: {
             username: this.apiKey,
             password: this.apiSecret
