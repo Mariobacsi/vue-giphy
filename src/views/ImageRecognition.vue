@@ -3,8 +3,9 @@
     <div class="col-8">
       <div class="input-group">
         <input class="form-control" type="url" v-model="imageUrl" placeholder="Image URL">
-        <button class="btn btn-secondary" type="button" @click="getData">get Data</button>
+        <button class="btn btn-outline-secondary" type="button" @click="getData">get Data</button>
       </div>
+      <b-form-file v-model="imageFile" accept="image/*"></b-form-file>
     </div>
     <tag-list class="col-4" :data="this.tags"></tag-list>
   </div>
@@ -20,6 +21,7 @@ export default {
   data() {
     return {
       tags: [],
+      imageFile: undefined,
       imageUrl: '', //https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg
       apiKey: "acc_2db7600b6fe4ac0",
       apiSecret: "40c7c466795f517d0abfdcae3be834f6",
@@ -28,15 +30,17 @@ export default {
   },
   methods: {
     getData() {
-      Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
-        auth: {
-          username: this.apiKey,
-          password: this.apiSecret
-        }
-      }).then(response => {
-        console.log(response)
-        this.tags = response.data.result.tags
-      }).catch(error => console.error(error))
+      if (this.imageUrl) {
+        Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
+          auth: {
+            username: this.apiKey,
+            password: this.apiSecret
+          }
+        }).then(response => {
+          console.log(response)
+          this.tags = response.data.result.tags
+        }).catch(error => console.error(error))
+      }
     }
   }
 }
