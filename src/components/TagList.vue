@@ -1,6 +1,15 @@
 <template>
   <div>
-    <b-table striped hover :items="data"></b-table>
+    <table>
+      <tr>
+        <th>Tag</th>
+        <th>Confidence</th>
+      </tr>
+      <tr v-for="(tag, id) in data" :key="id">
+        <td>{{ tag.tag.en }}</td>
+        <td>{{ tag.confidence }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 

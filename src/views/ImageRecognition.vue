@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <tag-list></tag-list>
-    <button class="btn btn-secondary" @click="getData">get Data</button>
+  <div class="col row">
+    <div class="col-8">
+      <button class="btn btn-secondary" @click="getData">get Data</button>
+    </div>
+    <tag-list class="col-4" :data="this.tags"></tag-list>
   </div>
 </template>
 
@@ -14,6 +16,7 @@ export default {
   components: {TagList},
   data() {
     return {
+      tags: [],
       imageUrl: 'https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg',
       apiKey: "acc_2db7600b6fe4ac0",
       apiSecret: "40c7c466795f517d0abfdcae3be834f6",
@@ -27,8 +30,10 @@ export default {
           username: this.apiKey,
           password: this.apiSecret
         }
-      }).then(response => console.log(response))
-          .catch(error => console.error(error))
+      }).then(response => {
+        console.log(response)
+        this.tags = response.data.result.tags
+      }).catch(error => console.error(error))
     }
   }
 }
