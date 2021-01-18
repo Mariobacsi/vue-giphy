@@ -34,11 +34,6 @@ export default {
       streaming: false
     }
   },
-  watch:{
-    imageUrl: () => {
-      this.getDataUrl
-    }
-  },
   methods: {
     //URL
     getDataUrl() {
