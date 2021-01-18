@@ -32,6 +32,11 @@ const routes = [
         path: '/translator',
         name: 'Translator',
         component: () => import('../views/Translator.vue')
+    },
+    {
+        path: '/image',
+        name: 'Image',
+        component: () => import('../views/ImageRecognition')
     }
 ]
 
