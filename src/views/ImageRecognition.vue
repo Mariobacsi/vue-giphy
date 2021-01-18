@@ -8,7 +8,7 @@
       <div class="input-group">
         <input class="col" type="file" id="fileUpload" accept="image/*" @change="onFileChange">
         <label data-browse="Browse" for="fileUpload" class="custom-file-label"><span class="d-block form-file-text"
-                                                                                     style="pointer-events: none;">Music.jpg</span></label>
+                                                                                     style="pointer-events: none;">{{ imageFile ? imageFile.name:'Upload File here' }}</span></label>
       </div>
       <div>
         <img v-if="imageUrl && !showFile" :src="imageUrl" class="col" style="max-height: 50vh; width: auto">
