@@ -59,10 +59,11 @@ export default {
         console.log(this.imageFile)
         let formData = new FormData()
         formData.append("image", this.imageFile, this.imageFile.name)
-        Axios.post('https://api.imagga.com/v2/uploads', {
-          body: formData,
-          username: this.apiKey,
-          password: this.apiSecret
+        Axios.post('https://api.imagga.com/v2/uploads', formData,{
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            'Authorization': 'Basic YWNjXzJkYjc2MDBiNmZlNGFjMDo0MGM3YzQ2Njc5NWY1MTdkMGFiZmRjYWUzYmU4MzRmNg=='
+          }
         }).then(response => {
           console.log(response)
           this.tags = response.data.result.tags
