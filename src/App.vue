@@ -9,6 +9,7 @@
         <router-link class="btn btn-secondary" to="/internationalization">{{ $t('internationalization.title') }}</router-link>
         <router-link to="/chat" class="btn btn-secondary">{{ $t('chat.title') }}</router-link>
         <router-link to="/translator" class="btn btn-secondary">{{ $t('translator.title') }}</router-link>
+        <router-link to="/image" class="btn btn-secondary">{{ $t('image.title') }}</router-link>
       </div>
 
       <div class="input-group">
