@@ -3,7 +3,8 @@
     <div class="col-8">
       <div class="col input-group">
         <input class="col-9 form-control" type="url" v-model="imageUrl" placeholder="Image URL">
-        <button class="col-3 btn btn-outline-secondary" type="button" @click="getTagsUrl">get Data</button>
+        <button class="btn btn-outline-secondary" @click="imageUrl = ''"><i class="fas fa-times"></i></button>
+        <button class="btn btn-outline-secondary" type="button" @click="getTagsUrl">get Data</button>
       </div>
       <div class="col input-group">
         <input class="col" type="file" id="fileUpload" accept="image/*" @change="onFileChange">
