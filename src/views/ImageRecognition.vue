@@ -1,7 +1,7 @@
 <template>
   <div class="col row">
     <div class="col-8">
-      <img v-if="imageUrl" :src="imageUrl" class="col">
+      <img v-if="imageUrl" :src="imageUrl" class="col" style="max-height: 50vh; width: auto">
       <div class="input-group">
         <input class="col-9 form-control" type="url" v-model="imageUrl" placeholder="Image URL">
         <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataUrl">get Data</button>
@@ -26,7 +26,9 @@ export default {
     return {
       tags: [],
       imageFile: undefined,
-      imageUrl: '', //https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg
+      imageUrl: '',
+      //https://docs.imagga.com/static/images/docs/sample/japan-605234_1280.jpg
+      //https://profile-images.xing.com/images/4e8bce2bc95b7a1eb42db975ee79285e-4/franz-stimpfl.1024x1024.jpg
       apiKey: "acc_2db7600b6fe4ac0",
       apiSecret: "40c7c466795f517d0abfdcae3be834f6",
       streaming: false
@@ -38,10 +40,7 @@ export default {
     }
   },
   methods: {
-    onFileChange(event) {
-      this.imageFile = event.target.files[0]
-      this.getDataFile()
-    },
+    //URL
     getDataUrl() {
       if (this.imageUrl) {
         Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
@@ -54,6 +53,11 @@ export default {
           this.tags = response.data.result.tags
         }).catch(error => console.error(error))
       }
+    },
+    //Dateien
+    onFileChange(event) {
+      this.imageFile = event.target.files[0]
+      this.getDataFile()
     },
     getDataFile() {
       if (this.imageFile) {

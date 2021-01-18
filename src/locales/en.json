@@ -19,5 +19,8 @@
   },
   "translator": {
     "title": "Translator"
+  },
+  "image": {
+    "title": "Image"
   }
 }

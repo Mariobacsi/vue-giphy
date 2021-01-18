@@ -1,13 +1,6 @@
 {
   "app": {
     "language": "Sprache",
-    "links": [
-      {"link": "/giphy", "text": "Giphy"},
-      {"link": "/internationalisation", "text": "Internationalisierung"},
-      {"link": "/chat", "text": "Chat"},
-      {"link": "/translate", "text": "Übersetzer"},
-      {"link": "/image", "text": "Image"}
-    ],
     "languages": [
       {"value": "de", "text": "Deutsch"},
       {"value": "en", "text": "Englisch"}
@@ -26,5 +19,8 @@
   },
   "translator": {
     "title": "Übersetzer"
+  },
+  "image": {
+    "title": "Image"
   }
 }
