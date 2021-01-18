@@ -4,11 +4,10 @@
       <img v-if="imageUrl" :src="imageUrl" class="col" style="max-height: 50vh; width: auto">
       <div class="input-group">
         <input class="col-9 form-control" type="url" v-model="imageUrl" placeholder="Image URL">
-        <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataUrl">get Data</button>
+        <button class="col-3 btn btn-outline-secondary" type="button" @click="getTagsUrl">get Data</button>
       </div>
       <div class="input-group">
         <input class="col-9" type="file" @change="onFileChange">
-        <button class="col-3 btn btn-outline-secondary" type="button" @click="getDataFile">get Data</button>
       </div>
     </div>
     <tag-list class="col-4" :data="this.tags"></tag-list>
@@ -36,7 +35,7 @@ export default {
   },
   methods: {
     //URL
-    getDataUrl() {
+    getTagsUrl() {
       if (this.imageUrl) {
         Axios.get('https://api.imagga.com/v2/tags?image_url=' + encodeURIComponent(this.imageUrl), {
           auth: {
@@ -52,9 +51,9 @@ export default {
     //Dateien
     onFileChange(event) {
       this.imageFile = event.target.files[0]
-      this.getDataFile()
+      this.getTagsFile()
     },
-    getDataFile() {
+    getTagsFile() {
       if (this.imageFile) {
         console.log(this.imageFile)
         let formData = new FormData()
@@ -66,7 +65,15 @@ export default {
           }
         }).then(response => {
           console.log(response)
-          this.tags = response.data.result.tags
+          Axios.get('https://api.imagga.com/v2/tags?image_upload_id=' + response.data.result.upload_id, {
+            auth: {
+              username: this.apiKey,
+              password: this.apiSecret
+            }
+          }).then(response => {
+            console.log(response)
+            this.tags = response.data.result.tags
+          }).catch(error => console.error(error))
         }).catch(error => console.error(error))
       }
     }
